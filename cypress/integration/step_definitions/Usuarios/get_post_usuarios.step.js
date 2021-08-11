@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
 import {When, Then} from 'cypress-cucumber-preprocessor/steps'
-import {ServeRest} from '../../services/serverest.service'
+import {ServeRest} from '../../../services/serverest.service'
 
 
 
-When(`resquest  all the users from /usuarios`, () => {
+When(`resquest all the users`, () => {
     ServeRest.get_all_users().then(users => {
         cy.wrap(users).as('Response')
 
@@ -25,6 +25,7 @@ Then(`must be responsed the schema {string} with status {int}`, (schema, status)
     cy.get('@Response').then ( res => {
          cy.contractValidation(res, schema, status).then( valid => {
             expect(valid).to.be.true
+            expect (res.status).to.equal(status)
         })
 
     }) 

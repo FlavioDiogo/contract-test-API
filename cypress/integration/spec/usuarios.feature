@@ -1,10 +1,10 @@
-Feature: Contract test with json-schema
+Feature: Users
 
-Scenario: Resquesting from serverest api and validating contract
-    When resquest  all the users from /usuarios
+Scenario: GET - Get all users from serverest api
+    When resquest all the users 
     Then must be responsed the schema "get-user" with status 200
 
-Scenario Outline: Posting users on serverest API and validating Contract
+Scenario Outline: POST - Posting user on serverest api
     When post the user of type "<type>"
     Then must be responsed the schema "post-user" with status <status>
     Examples:

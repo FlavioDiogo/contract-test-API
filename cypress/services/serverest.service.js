@@ -36,13 +36,8 @@ export class ServeRest extends Rest {
 
     }
 
-    static post_carrinhos(auth){
-        let body = {
-            "idProduto": "ZZALdB4HnYfqXSrk",
-            "quantidade": "3"
-        }
-
+    static post_carrinhos(type, auth){
+        let body = Factory.bodyCarrinho(type)
         return super.httpRequestWithBody('POST', URL_CARRINHOS, body, {authorization: auth})
     }
-
-}
+} 

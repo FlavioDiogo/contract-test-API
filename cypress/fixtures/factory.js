@@ -59,5 +59,19 @@ export class Factory {
             default:
                 return {notfound: "error"}
         }
+        
     }
-}    
+
+    static bodyCarrinho(type) {
+        switch(type) {
+            case 'valid':
+                return {
+                    "idProduto": "phmpgF9CPXgxe4kH",
+                    "quantidade": "1"
+                    
+                }
+            default:
+                return {notfound: "error"}
+        }
+    }
+} 
