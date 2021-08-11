@@ -1,0 +1,28 @@
+{
+  "name": "contract-test-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ajv": "^8.6.1",
+    "cypress": "^8.2.0",
+    "cypress-cucumber-preprocessor": "^4.0.3",
+    "faker": "^5.5.3",
+    "fs-extra": "^9.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step_definitions",
+    "cucumberJson": {
+      "generate": false,
+      "outputFolder": "cypress/report/reports/json"
+    }
+  }
+}
