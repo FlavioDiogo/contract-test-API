@@ -5,6 +5,7 @@ import {Factory} from '../fixtures/factory'
 const URL_USERS = '/usuarios'
 const URL_LOGIN = '/login'
 const URL_PRODUCT = '/produtos'
+const URL_CARRINHOS = '/carrinhos'
 
 export class ServeRest extends Rest {
 
@@ -32,6 +33,16 @@ export class ServeRest extends Rest {
         }
 
         return super.httpRequestWithBody('POST', URL_PRODUCT, body, {authorization: auth})
+
+    }
+
+    static post_carrinhos(auth){
+        let body = {
+            "idProduto": "ZZALdB4HnYfqXSrk",
+            "quantidade": "3"
+        }
+
+        return super.httpRequestWithBody('POST', URL_CARRINHOS, body, {authorization: auth})
     }
 
 }

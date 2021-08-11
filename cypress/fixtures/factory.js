@@ -50,7 +50,7 @@ export class Factory {
                     "email": "",
                     "password": "abcde"  
                 }
-            case 'empty_email':
+            case 'empty_password':
                 return {
                         "email": faker.internet.email(),
                         "password": ""  
