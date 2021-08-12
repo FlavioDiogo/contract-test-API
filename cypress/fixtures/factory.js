@@ -62,23 +62,28 @@ export class Factory {
         
     }
 
+
     static bodyCarrinho(type) {
         switch(type) {
             case 'valid':
                 return {
-                    "idProduto": "phmpgF9CPXgxe4kH",
+                    "produtos": [
+                        {
+                    "idProduto": "BeeJh5lz3k6kSIzA",
                     "quantidade": "1"
                     
                 }
+                    ]
+                }
                 case 'invalid':
                 return {
-                    "idProduto": "phmpgF9CPXgxe4kH",
+                    "idProduto": "BeeJh5lz3k6kSIzA",
                     "quantidade": "1"
                     
                 }
                 case 'invalid_token':
                     return {
-                        "idProduto": "phmpgF9CPXgxe4kH",
+                        "idProduto": "BeeJh5lz3k6kSIzA",
                         "quantidade": "1"
                         
                     }
@@ -86,6 +91,8 @@ export class Factory {
                 return {notfound: "error"}
         }
     }
+
+   
 
     static bodyProduto(type) {
         switch(type) {

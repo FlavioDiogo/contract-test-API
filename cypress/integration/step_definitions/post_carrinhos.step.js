@@ -15,9 +15,22 @@ When(`realizar o cadastro de um carrinho {string}`, (type) => {
     cy.get('@Response').then(Login_res => {
         let auth = Login_res.body.authorization;
         console.log(Login_res)
-        ServeRest.post_carrinhos(type, auth); 
+        ServeRest.post_carrinhos(type, auth).then(res => {
+            cy.wrap(res).as('Response')    
+
+        }); 
     });
 });
+
+
+Then(`deverá retornar a mensagem {string}`, (mensagem) => {
+    cy.get('@Response').then( res => {
+        expect(res.body.message).to.equal(mensagem)
+    });
+});
+
+
+
 
 
 

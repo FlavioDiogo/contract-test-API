@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import {When, Then} from 'cypress-cucumber-preprocessor/steps'
-import {ServeRest} from '../../../services/serverest.service'
+import {ServeRest} from '../../services/serverest.service'
 
 
 
