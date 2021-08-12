@@ -24,17 +24,11 @@ export class ServeRest extends Rest {
         return super.httpRequestWithBody('POST', URL_LOGIN, body)
     }
 
-    static post_produto(auth){
-        let body = {
-            "nome": "lapis de cor",
-            "preco": 12,
-            "descricao": "lápis",
-            "quantidade": 76
-        }
-
+    static post_produto(type, auth){
+        let body = Factory.bodyProduto(type)
         return super.httpRequestWithBody('POST', URL_PRODUCT, body, {authorization: auth})
 
-    }
+        }
 
     static post_carrinhos(type, auth){
         let body = Factory.bodyCarrinho(type)

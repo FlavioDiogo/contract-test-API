@@ -70,6 +70,33 @@ export class Factory {
                     "quantidade": "1"
                     
                 }
+                case 'invalid':
+                return {
+                    "idProduto": "phmpgF9CPXgxe4kH",
+                    "quantidade": "1"
+                    
+                }
+                case 'invalid_token':
+                    return {
+                        "idProduto": "phmpgF9CPXgxe4kH",
+                        "quantidade": "1"
+                        
+                    }
+            default:
+                return {notfound: "error"}
+        }
+    }
+
+    static bodyProduto(type) {
+        switch(type) {
+            case 'valid':
+                return {
+                    "nome": "caneta roxa",
+                    "preco": 300,
+                    "descricao": "caneta",
+                    "quantidade": 556
+                    
+                }
             default:
                 return {notfound: "error"}
         }

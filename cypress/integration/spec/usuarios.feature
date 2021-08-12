@@ -1,4 +1,4 @@
-Feature: Users
+Feature: Usuarios
 
 Scenario: GET - Get all users from serverest api
     When resquest all the users 
