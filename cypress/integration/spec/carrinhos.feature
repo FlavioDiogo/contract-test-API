@@ -8,5 +8,5 @@ Scenario Outline: POST - carrinhos
         Examples:
             | type          | status | mensagem                         |
             | valid         | 201    | Cadastro realizado com sucesso   |
-           # | invalid       | 400    | Produto não encontrado |
+           #| invalid       | 400    | Produto não encontrado |
            # | invalid_token | 401    | Token ausente          |

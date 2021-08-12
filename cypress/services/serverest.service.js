@@ -34,4 +34,8 @@ export class ServeRest extends Rest {
         let body = Factory.bodyCarrinho(type)
         return super.httpRequestWithBody('POST', URL_CARRINHOS, body, {authorization: auth})
     }
+
+    static get_all_products(){
+        return super.httpRequestWithoutBody('GET', URL_PRODUCT)
+    }
 } 

@@ -95,17 +95,12 @@ export class Factory {
    
 
     static bodyProduto(type) {
-        switch(type) {
-            case 'valid':
-                return {
-                    "nome": "caneta roxa",
-                    "preco": 300,
-                    "descricao": "caneta",
-                    "quantidade": 556
-                    
-                }
-            default:
-                return {notfound: "error"}
-        }
+                   return {
+                    "nome": "Logitech MX Vert",
+                    "preco": 470,
+                    "descricao": "Mouse",
+                    "quantidade": 381
+                  
+                   }
     }
-} 
+}
