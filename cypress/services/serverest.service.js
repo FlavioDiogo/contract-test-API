@@ -38,4 +38,10 @@ export class ServeRest extends Rest {
     static get_all_products(){
         return super.httpRequestWithoutBody('GET', URL_PRODUCT)
     }
+    static get_user_id(type){
+        let id = Factory.userID(type)
+        let body = Factory.userBody(type)
+        return super.httpRequestWithBody('GET', `${URL_USERS}/${id}`, body)
+    }
+
 } 

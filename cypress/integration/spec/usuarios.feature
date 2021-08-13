@@ -9,5 +9,14 @@ Scenario Outline: POST - Posting user on serverest api
     Then must be responsed the schema "post-user" with status <status>
     Examples:
             | type    | status |
-            | invalid | 400    |
             | valid   | 201    |
+            | invalid | 400    |
+
+
+Scenario Outline: GET - usuarios por id
+    When solicitar usuario do tipo "<type>"
+    Then deverá retornar uma resposta com o schema "get-user-id" with status <status>
+    And deverá retornar com uma mensagem "<msg>"
+    Examples:
+            | type    | status | msg  |
+            | valid   | 200    | ok   |

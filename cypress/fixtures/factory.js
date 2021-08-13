@@ -94,7 +94,7 @@ export class Factory {
 
    
 
-    static bodyProduto(type) {
+    static bodyProduto() {
                    return {
                     "nome": "Logitech MX Vert",
                     "preco": 470,
@@ -102,5 +102,33 @@ export class Factory {
                     "quantidade": 381
                   
                    }
+
+                   
     }
-}
+
+    static userID(type) {
+        switch(type) {
+                
+            case 'valid':
+                return "0uxuPY0cbmQhpEz1"
+        }    
+     
+    }   
+
+    static userBody(type) {
+             return {
+                "nome": "Fulano da Silva",
+                "email": "beltrano@qa.com.br",
+                "password": "teste",
+                "administrador": "true",
+                "_id": "0uxuPY0cbmQhpEz1", 
+
+             
+             }
+               
+
+    }
+}    
+    
+
+       
